@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5bkbpkc3a05j"]
+
+[ext_resource type="PackedScene" uid="uid://b80rewmpy36cs" path="res://player.tscn" id="1_3w7ia"]
+
+[node name="World" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_3w7ia")]
+position = Vector2(19, 131)
+metadata/_edit_horizontal_guides_ = [235.0]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(0, 12)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(0, 176, 150, 176, 150, 200, 0, 200)
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D/CollisionPolygon2D"]
+color = Color(0.65098, 0.572549, 0.690196, 1)
+polygon = PackedVector2Array(0, 176, 150, 176, 150, 200, 0, 200)
